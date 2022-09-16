@@ -1,0 +1,1 @@
+.\wink.exe -a etchash --server etc.poolbinance.com:1800 --user Xeroxat.004
